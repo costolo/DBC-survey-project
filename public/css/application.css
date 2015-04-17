@@ -21,3 +21,7 @@ header {
 #instructions, #questions {
   display: none;
 }
+
+#take-survey {
+  display: inline-block;
+}
