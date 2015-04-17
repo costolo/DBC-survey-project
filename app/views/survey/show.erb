@@ -5,7 +5,10 @@
   <div id="instructions">
     <p>Please select <span>one</span> answer from the choices provided.</p>
   </div>
-  <div id="show-question">
+  <div id="questions">
+    <% @survey.questions.each do |question| %>
+      <%= erb :_question, locals: {question: question}
+    <% end %>
   </div>
 </div>
 
