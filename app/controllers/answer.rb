@@ -1,7 +1,7 @@
-get '/answer' do
-  
+get '/answers' do
+  redirect '/'
 end
 
-post '/answer' do
+post '/answers' do
 
 end
