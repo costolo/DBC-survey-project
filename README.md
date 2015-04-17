@@ -14,4 +14,4 @@ Phase 2 Week 2 Group Project
 - Wireframe
   - ![wire frame](http://i.imgur.com/NAiS2tC.jpg)
 - Git workflow/Team responsibilities
-  - Ben is gonna press the green button for pull requests   
+  - Ben is gonna press the green button for pull requests
