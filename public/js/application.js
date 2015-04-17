@@ -1,7 +1,11 @@
 $(document).ready(function() {
-  $('#take-survey').on('click', function(event) {
+
+  $('#show').on('click', function(event) {
     event.preventDefault;
-    $('#instructions').toggle();
+    // $('#instructions').toggle();
     $('#questions').toggle();
+    var buttonLabel = $(this).text();
+    console.log(buttonLabel);
+    $(this).text(buttonLabel === "Show Survey" ? "Hide Survey" : "Show Survey");
   });
 });
