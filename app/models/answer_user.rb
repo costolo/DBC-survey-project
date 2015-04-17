@@ -1,3 +1,6 @@
 class AnswerUser < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :user
+  belongs_to :answer
+
+  validates :user_id, :answer_id, presence: true
 end
