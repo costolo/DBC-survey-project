@@ -1,0 +1,14 @@
+<div class="container">
+	<h2><%= @user.name %></h2>
+
+	<p>Surveys made: </p>
+	<% @user.surveys.each do |survey| %>
+		<a href="/surveys/<%= survey.id %>"><%= survey.title %></a><br>
+	<% end %>
+
+	<p>Surveys taken: </p>
+	<% @user.survey_users.each do |survey_user| %>
+		<a href="/surveys/ <%= survey_user.survey.id %>"><%= survey_user.survey.title %></a><br>
+	<% end %>
+
+</div>
