@@ -1,3 +1,5 @@
+
+
 get '/surveys' do
   @surveys = Survey.all
   erb :'surveys/index'
@@ -9,7 +11,7 @@ end
 
 get '/surveys/:id' do |id|
   @survey = Survey.find(id)
-  erb :'/surveys/show'
+  erb :'surveys/show'
 end
 
 post '/surveys' do
@@ -17,4 +19,19 @@ post '/surveys' do
   redirect '/surveys'
 end
 
-put
+get '/surveys/:id/edit' do |id|
+  @survey = Survey.find(id)
+  erb :'surveys/edit'
+end
+
+put '/surveys/:id' do |id|
+  survey = Survey.find(id)
+  survey.update(params[:survey])
+  redirect "/surveys/#{id}"
+end
+
+delete '/surveys:id' do |id|
+  survey = Survey.find(id)
+  survey.destroy!
+  redirect '/surveys'
+end
