@@ -1,7 +1,32 @@
+header {
+    width:100%;
+    position:fixed;
+    top:0px;
+    margin-bottom:70px;
+    background-color:white;
+    z-index:2;
+}
+.col-md-12{
+  height:36px;
+}
+
 ul {
   list-style-type: none;
+  margin:0px;
 }
 
 .username {
   font-size:12px;
+}
+
+#content {
+  position:relative;
+  top:50px;
+  z-index:1;
+}
+
+.container {
+  border-right:1px solid #F2F2F2;
+  border-left:1px solid #F2F2F2;
+  overflow:scroll;
 }
