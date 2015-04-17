@@ -17,6 +17,7 @@ ul {
 
 .username {
   font-size:12px;
+  margin-bottom:10px;
 }
 
 #content {
@@ -29,4 +30,8 @@ ul {
   border-right:1px solid #F2F2F2;
   border-left:1px solid #F2F2F2;
   overflow:scroll;
+}
+
+.survey-title{
+  font-size:20px;
 }
