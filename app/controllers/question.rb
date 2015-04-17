@@ -3,11 +3,12 @@ get '/questions/:id' do |id|
   erb :_question, layout: false, locals: {question: question}
 end
 
-get '/question' do
-  
+get '/questions' do
+  redirect '/'
 end
 
-post '/question' do
-
+post '/questions' do
+  @question = Question.create(params[:question])
+  erb :'question-answer/_new_answers', layout: false
 end
 

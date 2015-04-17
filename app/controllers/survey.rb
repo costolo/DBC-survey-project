@@ -27,7 +27,7 @@ end
 # create a new survey route
 
 post '/surveys' do
-  Survey.create(params[:survey])
+  @survey = Survey.create(params[:survey])
   erb :'question-answer/_new_question', layout: false
 end
 
