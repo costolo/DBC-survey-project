@@ -1,4 +1,5 @@
 get '/' do
+  session[:user_id] = 1
 	redirect '/surveys'
 end
 
@@ -8,6 +9,7 @@ get '/surveys' do
 end
 
 get '/surveys/new' do
+  @user = current_user
   erb :'surveys/new'
 end
 
