@@ -1,0 +1,25 @@
+<div class='container'>
+  <%= @signin_error %>
+  <form action='/login' method='POST'>
+  	<br>
+  	<label>Username</label><br>
+  	<input type='text' name='name'><br>
+
+  	<label>Password</label><br>
+  	<input type='password' name='password'><br><br>
+  	<input type='submit' value="Login">
+  </form>
+  <br>
+  <br>
+
+  <form action='/signup' method='POST'>
+  	<br>
+  	<label>Username</label><br>
+  	<input type="text" name='user[name]'><br>
+
+	<label>Password</label><br>
+  	<input type='password' name='user[password]'><br><br>
+
+  	<input type='submit' value='Sign Up'>
+  </form>  	
+</div>

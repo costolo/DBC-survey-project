@@ -1,5 +1,5 @@
 get '/' do
-  erb :welcome
+  erb :login
 end
 
 get '/login' do
@@ -20,6 +20,7 @@ end
 post '/signup' do
 	user = User.create(params[:user])
 	session[:user_id] = user.id
+	redirect '/'
 end
 
 get '/logout' do
