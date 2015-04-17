@@ -1,0 +1,10 @@
+<div class="container">
+  <ul>
+    <% @surveys.each do |survey| %>
+      <a href='/surveys/<%=survey.id%>'>
+        <li class="survey-title"><%= survey.title %></li>
+      </a>
+        <li class="username">by: <%= user_from_survey(survey).name %>
+    <% end %>
+  </ul>
+</div>
