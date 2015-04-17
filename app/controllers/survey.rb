@@ -16,6 +16,11 @@ get '/surveys/:id' do |id|
   erb :'surveys/show'
 end
 
+get '/surveys/:id/stats' do |id|
+  @survey = Survey.find(id)
+  erb :'surveys/_survey_stats'
+end
+
 # create a new survey route
 
 post '/surveys' do
