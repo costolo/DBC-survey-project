@@ -2,14 +2,19 @@
   <h2><%= @survey.title %></h2>
   <p><%= @survey.description %></p>
   <button type="button" class="survey-button" id="show">Show Survey</button>
-  <button type="button" class="survey_button" id="take">Take Survey</button>
+  <form id="take-survey" action="/questions/<%= next_question(session[:questions]) %>" method="GET">
+    <input type="hidden" name="question_id" value="<%= @questions.first.id %>">
+    <button type="submit" class="survey_button" id="take">Take Survey</button>
+  </form>
   <div id="instructions">
     <p>Please select <span>one</span> answer from the choices provided.</p>
   </div>
   <div id="questions">
-    <% @survey.questions.each do |question| %>
+    <% @questions.each do |question| %>
       <%= erb :_question, locals: {question: question} %>
     <% end %>
+  </div>
+  <div id="question-display">
   </div>
 </div>
 
