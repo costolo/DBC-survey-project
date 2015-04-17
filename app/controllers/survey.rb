@@ -20,5 +20,5 @@ end
 
 post '/surveys' do
   Survey.create(params[:survey])
-  redirect '/surveys'
+  erb :'question-answer/_new_question', layout: false
 end
