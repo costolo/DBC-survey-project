@@ -1,3 +1,7 @@
+get '/' do
+	redirect '/surveys'
+end
+
 get '/surveys' do
   @surveys = Survey.all
   erb :'surveys/index'
@@ -16,5 +20,3 @@ post '/surveys' do
   Survey.create(params[:survey])
   redirect '/surveys'
 end
-
-put
