@@ -20,8 +20,8 @@
   <title>Survey Gorilla</title>
 </head>
 <body>
-<div id="content">
   <header>
+<<<<<<< HEAD
 
     <a href="/"><img src="/img/gorilla.png" class="logo"></a>
     <h1>SURVEY GORILLA</h1>
@@ -32,8 +32,34 @@
       <% else %>
         <a href="/login">Login</a>
       <% end %>
+=======
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+          <ul class="breadcrumb">
+            <li>
+              <a href="/">home</a>
+            </li>
+            <li>
+              <a href="/">profile</a>
+            </li>
+            <li>
+              <a href="/surveys/new">new survey</a>
+            </li>
+            <li class="dropdown pull-right">
+             <% if current_user %>
+               <a href="/logout">Logout</a>
+             <% else %>
+               <a href="/login">Login</a>
+             <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+>>>>>>> add navbar and update index css
   </header>
+<div id="content">
   <%= yield %>
 </div>
 </body>
 </html>
+
