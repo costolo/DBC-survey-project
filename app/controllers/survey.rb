@@ -1,4 +1,10 @@
+
 # get routes for surveys
+
+get '/' do
+	redirect '/surveys'
+end
+
 
 get '/surveys' do
   @surveys = Survey.all
@@ -43,3 +49,4 @@ delete '/surveys:id' do |id|
   survey.destroy!
   redirect '/surveys'
 end
+
