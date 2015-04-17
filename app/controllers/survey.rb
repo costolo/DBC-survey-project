@@ -1,4 +1,4 @@
-
+# get routes for surveys
 
 get '/surveys' do
   @surveys = Survey.all
@@ -14,10 +14,14 @@ get '/surveys/:id' do |id|
   erb :'surveys/show'
 end
 
+# create a new survey route
+
 post '/surveys' do
   Survey.create(params[:survey])
   redirect '/surveys'
 end
+
+# edit a survey route
 
 get '/surveys/:id/edit' do |id|
   @survey = Survey.find(id)
@@ -29,6 +33,8 @@ put '/surveys/:id' do |id|
   survey.update(params[:survey])
   redirect "/surveys/#{id}"
 end
+
+# delete a survey route
 
 delete '/surveys:id' do |id|
   survey = Survey.find(id)
