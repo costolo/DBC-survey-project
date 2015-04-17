@@ -1,13 +1,13 @@
 <div id="show-survey">
   <h2><%= @survey.title %></h2>
   <p><%= @survey.description %></p>
-  <button type="button">Take Survey</button>
+  <button type="button" id="take-survey">Take Survey</button>
   <div id="instructions">
     <p>Please select <span>one</span> answer from the choices provided.</p>
   </div>
   <div id="questions">
     <% @survey.questions.each do |question| %>
-      <%= erb :_question, locals: {question: question}
+      <%= erb :_question, locals: {question: question} %>
     <% end %>
   </div>
 </div>
