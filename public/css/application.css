@@ -12,3 +12,12 @@ header {
   border-bottom: 2px solid green;
   margin-bottom: 50px;
 }
+
+#login-toolbar {
+  display: inline-block;
+  float: right;
+}
+
+#instructions {
+  display: none;
+}
