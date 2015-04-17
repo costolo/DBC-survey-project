@@ -1,7 +1,7 @@
 <div class="container">
   <div class="qa-form">
     <h2>Create a survey</h2>
-    <form role="form" action="/surveys" method="POST">
+    <form id="survey-form" role="form" action="/surveys" method="POST">
       <div class="form-group">
         <label>Title</label>
         <input type="text" class="form-control" placeholder="Enter a title" name="survey[title]">
@@ -11,5 +11,7 @@
       </div>
     </form>
   </div>
+  <div class="new-question"></div>
+  <div class="new-answers"></div>
   <div class="added-questions"></div>
 </div>

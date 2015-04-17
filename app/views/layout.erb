@@ -16,23 +16,16 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="/js/createsurvey.js"></script>
 
   <title>Survey Gorilla</title>
 </head>
 <body>
   <header>
-<<<<<<< HEAD
 
     <a href="/"><img src="/img/gorilla.png" class="logo"></a>
     <h1>SURVEY GORILLA</h1>
     <div id="login-toolbar">
-
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-      <% end %>
-=======
     <div class="row clearfix">
         <div class="col-md-12 column">
           <ul class="breadcrumb">
@@ -55,7 +48,6 @@
           </ul>
         </div>
       </div>
->>>>>>> add navbar and update index css
   </header>
 <div id="content">
   <%= yield %>
