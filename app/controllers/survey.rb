@@ -1,12 +1,6 @@
 
 # get routes for surveys
 
-get '/' do
-  session[:user_id] = 1
-	redirect '/surveys'
-end
-
-
 get '/surveys' do
   @surveys = Survey.all
   erb :'surveys/index'
