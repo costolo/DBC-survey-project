@@ -52,8 +52,8 @@ ul {
 }
 
 .container {
-  border-right:1px solid #F2F2F2;
-  border-left:1px solid #F2F2F2;
+  border-right:2px solid green;
+  border-left:2px solid green;
   overflow:scroll;
 }
 
