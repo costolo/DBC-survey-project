@@ -3,7 +3,11 @@
     <h2><%= @survey.title %></h2>
     <p><%= @survey.description %></p>
     <button type="button" class="survey-button" id="show">Show Survey</button>
-    <button type="button" class="survey_button" id="take">Take Survey</button>
+    <form id="take-survey" action="/survey_users" method="POST">
+      <input type="hidden" name="survey_user[user_id]" value="<%= current_user.id %>">
+      <input type="hidden" name="survey_user[survey_id]" value="<%= @survey.id %>">
+      <button type="submit" class="survey_button">Take Survey</button>
+    </form>
     <div id="instructions">
       <p>Please select <span>one</span> answer from the choices provided.</p>
     </div>
