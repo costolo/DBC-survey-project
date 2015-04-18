@@ -1,5 +1,5 @@
 get '/' do
-  erb :login
+	current_user ? (redirect '/surveys') : (erb :login)
 end
 
 get '/login' do
