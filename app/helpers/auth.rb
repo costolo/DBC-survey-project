@@ -5,3 +5,13 @@ def current_user
     return nil
   end
 end
+
+def set_error!(error)
+  session[:error] = error
+end
+
+def get_error!
+  msg = session[:error]
+  session[:error] = nil
+  msg
+end
