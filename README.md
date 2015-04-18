@@ -26,4 +26,4 @@ Phase 2 Week 2 Group Project
 - Team responsibilities
   - Kurt - set up routes and handled statistics
   - Tara - show surveys and take surveys
-  - Ben - dynamic create survey form
+  - Ben - dynamic create survey form and some styling
