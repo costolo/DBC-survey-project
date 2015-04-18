@@ -1,7 +1,7 @@
 <h3><%= question.content %></h3>
-<form action="/answer_users" type="POST">
+<form class="question-response" action="/answer_users" type="POST">
   <% question.answers.each do |answer| %>
     <%= erb :_answer, locals: {answer: answer} %>
   <% end %>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default response">Submit</button>
 </form>
