@@ -7,7 +7,6 @@ $(document).ready(function() {
 					 url: $target.attr('action'),
 					 type: "GET",
 		}).done(function(response) {
-			console.log(response)
 			$('.survey-stats').append(response + "<br>")
 		})
 	})

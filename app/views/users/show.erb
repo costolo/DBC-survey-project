@@ -8,17 +8,14 @@
 		<% end %>
 	</div>
 
-	<div>
-		<p>Surveys made: </p>
-		<div class='survey-div'>
-			<% @user.surveys.each do |survey| %>
-				<a href="/surveys/<%= survey.id %>"><%= survey.title %></a>
-					<form class='stats-button' action='/surveys/<%= survey.id %>/stats'>
-						<input type='submit' value='stats'>
-					</form>
-					<br>
-			<% end %>
-		</div>
-			<div class='survey-stats'></div>
-	</div>
+<div class='container'>
+<p>Surveys made: </p>
+<div class='survey-div'>
+	<% @user.surveys.each do |survey| %>
+		<a href="/surveys/<%= survey.id %>"><%= survey.title %></a>
+			<form class='stats-button' action='/surveys/<%= survey.id %>/stats'>
+				<input type='submit' value='stats'>
+			</form><br>	
+	<% end %>
 </div>
+<div class='survey-stats'></div>
