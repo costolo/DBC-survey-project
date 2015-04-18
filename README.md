@@ -13,7 +13,7 @@ Phase 2 Week 2 Group Project
   - https://trello.com/b/cjrsxdX8/dbc-survey-project
 - Wireframe
   - ![wire frame](http://i.imgur.com/NAiS2tC.jpg)
-- Git workflow/Team responsibilities
+- Git workflow
   - checkout to new branch
   - DO WORK
   - add, commit
@@ -23,4 +23,7 @@ Phase 2 Week 2 Group Project
   - git rebase dev
   - git push origin your-branch
   - git merge
-    - Ben is gonna press the green button for pull requests   
+- Team responsibilities
+  - Kurt - set up routes and handled statistics
+  - Tara - show surveys and take surveys
+  - Ben - dynamic create survey form
