@@ -8,15 +8,15 @@ $(document).ready(function() {
   });
 
   $('#take').on('click', function(event) {
-    event.preventDefault;
+    // event.preventDefault;
     $('#instructions').toggle();
     $(this).prop('disabled', true);
     $('#show').prop('disabled', true);
     $('#questions').toggle(false);
-    var firstQuestionId = $('[name="question_id"]').val();
+    // var firstQuestionId = $('[name="question_id"]').val();
 
     $.ajax({
-      url: '/questions/' + firstQuestionId,
+      url: '/question',// + firstQuestionId,
       type: 'GET',
       dataType: 'html'
     }).done(function(response) {
