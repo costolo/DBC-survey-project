@@ -61,3 +61,13 @@ ul {
   font-size:20px;
 }
 
+.survey-div {
+    float: left;
+    width: 150px;
+    display: inline-block;
+}
+
+.survey-stats {
+    float: left;
+    display: inline-block;
+}
