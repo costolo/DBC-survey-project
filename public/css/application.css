@@ -71,3 +71,7 @@ ul {
     float: left;
     display: inline-block;
 }
+
+.breadcrumb {
+  background-color:white;
+}
