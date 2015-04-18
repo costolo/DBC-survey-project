@@ -3,10 +3,7 @@
     <h2><%= @survey.title %></h2>
     <p><%= @survey.description %></p>
     <button type="button" class="survey-button" id="show">Show Survey</button>
-    <form id="take-survey" action="/questions/:id" method="GET">
-      <input type="hidden" name="question_id" value="<%= next_question(session[:questions]) %>">
-      <button type="submit" class="survey_button" id="take">Take Survey</button>
-    </form>
+    <button type="submit" class="survey_button" id="take">Take Survey</button>
     <div id="instructions">
       <p>Please select <span>one</span> answer from the choices provided.</p>
     </div>
