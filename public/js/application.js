@@ -8,11 +8,19 @@ $(document).ready(function() {
     $(this).text(buttonLabel === "Show Survey" ? "Hide Survey" : "Show Survey");
   });
 
-  $('#take').on('click', function(event) {
+  $('#take-survey').on('submit', function(event) {
+    event.preventDefault();
     $('#instructions').toggle();
     $(this).prop('disabled', true);
     $('#show').prop('disabled', true);
     $('#questions').toggle(false);
+
+    var data = $(this).serialize();
+    $.ajax({
+      url: '/survey_users',
+      type: 'POST',
+      data: data,
+    });
 
     $.ajax({
       url: '/question',
@@ -21,21 +29,23 @@ $(document).ready(function() {
     }).done(function(response) {
       $('#question-display').html(response);
     });
+
   });
 
-  $('#show-survey').on('submit', '.question-response', function(event) {
-    event.preventDefault();
+  var sessionQuestions = $('[name="session_questions"]').val();
+  if (sessionQuestions > 1) {
+    $('#show-survey').on('submit', '.question-response', function(event) {
+      event.preventDefault();
 
-    var data = $('.question-response').serialize();
-    $.ajax({
-      url: '/answer_users',
-      type: 'POST',
-      data: data,
-      dataType: 'html'
-    }).done(function(response) {
-      console.log(response);
-      $('#question-display').html(response);
+      var data = $('.question-response').serialize();
+      $.ajax({
+        url: '/answer_users',
+        type: 'POST',
+        data: data,
+        dataType: 'html'
+      }).done(function(response) {
+        $('#question-display').html(response);
+      });
     });
-  });
-
+  };
 });
