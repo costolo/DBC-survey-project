@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var question_response;
   $('#survey-form').on('submit', function (event) {
+    $('#continue').hide();
     event.preventDefault();
     var $target = $(event.target);
     $.ajax({
@@ -14,6 +15,7 @@ $(document).ready(function () {
   });
 
   $('.container').on('submit', '#question-form', function (event) {
+    $('#question-button').hide();
     event.preventDefault();
     var $target = $(event.target);
     $.ajax({
