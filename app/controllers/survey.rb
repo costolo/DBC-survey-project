@@ -26,7 +26,9 @@ end
 
 get '/surveys/:id/stats' do |id|
   @survey = Survey.find(id)
-  erb :'surveys/_survey_stats'
+  if request.xhr?
+    erb :'surveys/_survey_stats', layout: false
+  end
 end
 
 # create a new survey route
