@@ -26,29 +26,31 @@
     <a href="/"><img src="/img/gorilla.png" class="logo"></a>
     <h1>SURVEY GORILLA</h1>
     <div id="login-toolbar">
+    <% if current_user %>
       <div class="row clearfix">
           <div class="col-md-12 column">
             <ul class="breadcrumb">
               <li>
                 <a href="/">home</a>
               </li>
-              <li>
-                <a href="/users/<%=current_user.id%>">profile</a>
-              </li>
+                <li>
+                  <a href="/users/<%=current_user.id%>">profile</a>
+                </li>
               <li>
                 <a href="/surveys/new">new survey</a>
               </li>
               <li class="dropdown pull-right">
                <% if current_user %>
-                 <a href="/logout">Logout</a>
+                 <a href="/logout">logout</a>
                <% else %>
-                 <a href="/login">Login</a>
+                 <a href="/login">login</a>
                <% end %>
               </li>
             </ul>
           </div>
         </div>
       </div>
+    <% end %>
   </header>
 <div id="content">
   <%= yield %>
