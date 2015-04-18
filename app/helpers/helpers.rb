@@ -3,5 +3,5 @@ def user_from_survey(survey)
 end
 
 def user_has_taken_survey?(survey)
-  SurveyUser.find_by(survey_id: survey.id, user_id: current_user.user_id) ? true : false
+  SurveyUser.find_by(survey_id: survey.id, user_id: current_user.id) ? true : false
 end
