@@ -4,9 +4,7 @@
     <p><%= @survey.description %></p>
     <button type="button" class="btn btn-default" id="show">Show Survey</button>
     <% if !user_has_taken_survey?(@survey) && !user_created_survey?(@survey) %>
-      <form id="take-survey" action="/questions/:id" method="GET">
-        <button type="submit" class="btn btn-default" id="take">Take Survey</button>
-      </form>
+      <button type="button" class="btn btn-default" id="take">Take Survey</button>
     <% end %>
     <div id="instructions">
       <p>Please select <span>one</span> answer from the choices provided.</p>
