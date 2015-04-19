@@ -1,4 +1,5 @@
 <input type="hidden" name="answer_user[user_id]" value="<%= current_user.id %>">
+<input type="hidden" name="answer_user[question_id]" value="<%= answer.question.id%>">
 <input type="radio" name="answer_user[answer_id]" value="<%= answer.id%>" required> &nbsp; <%= answer.content %>
 <br>
 
