@@ -32,20 +32,23 @@ $(document).ready(function() {
 
   });
 
-  var sessionQuestions = $('[name="session_questions"]').val();
-  if (sessionQuestions > 1) {
     $('#show-survey').on('submit', '.question-response', function(event) {
-      event.preventDefault();
 
-      var data = $('.question-response').serialize();
-      $.ajax({
-        url: '/answer_users',
-        type: 'POST',
-        data: data,
-        dataType: 'html'
-      }).done(function(response) {
-        $('#question-display').html(response);
-      });
+        event.preventDefault();
+        var data = $('.question-response')
+        $.ajax({
+          url: '/answer_users',
+          type: 'POST',
+          data: data.serialize(),
+          dataType: 'html'
+        }).done(function(response) {
+          $('#question-display').html(response);
+          if (response.indexOf("Thank you for your participation") > -1) {
+            setTimeout(function() {
+              var userId = $(data).find('[name="answer_user[user_id]"]').val();
+              window.location.href = '/users/' + userId;
+            }, 2000);
+          };
+        });
     });
-  };
 });
