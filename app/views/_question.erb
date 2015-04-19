@@ -1,6 +1,5 @@
 <h3><%= question.content %></h3>
 <form class="question-response" action="/answer_users" method="POST">
-  <input type="hidden" name="session_questions" value="<%= session[:questions].length %>">
   <% question.answers.each do |answer| %>
     <%= erb :_answer, locals: {answer: answer} %>
   <% end %>
