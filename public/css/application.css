@@ -70,6 +70,7 @@ ul {
 .survey-stats {
     float: left;
     display: inline-block;
+<<<<<<< HEAD
 }
 
 .breadcrumb {
@@ -78,4 +79,7 @@ ul {
 
 .index {
   padding:0px;
+=======
+    display: none; 
+>>>>>>> adds survey data to surveys users have made, need to fix bug that displays all instead of the one you clicked on
 }

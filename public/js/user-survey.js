@@ -1,4 +1,5 @@
 $(document).ready(function() {
+<<<<<<< HEAD
   $('.stats-button').on('submit', function(event) {
     event.preventDefault();
     var $target = $(event.target);
@@ -11,4 +12,11 @@ $(document).ready(function() {
       $('.survey-stats').append(response + "<br>")
     })
   })
+=======
+	$('.stats-button').on('submit', function(event) {
+		event.preventDefault();
+		var $target = $(event.target);
+		$('.survey-stats').toggle();
+	})
+>>>>>>> adds survey data to surveys users have made, need to fix bug that displays all instead of the one you clicked on
 })
