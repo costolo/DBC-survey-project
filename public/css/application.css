@@ -62,14 +62,11 @@ ul {
 }
 
 .survey-div {
-    float: left;
-    width: 150px;
-    display: inline-block;
+
 }
 
 .survey-stats {
-    float: left;
-    display: inline-block;
+    display: none; 
 }
 
 .breadcrumb {
