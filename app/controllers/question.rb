@@ -3,7 +3,7 @@ get '/question' do
   if question
     erb :_question, layout: false, locals: {question: question}
   else
-    redirect "/users/#{current_user.id}"
+    erb :'surveys/_survey_over', layout: false
   end
 end
 
