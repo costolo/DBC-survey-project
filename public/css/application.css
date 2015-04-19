@@ -71,3 +71,11 @@ ul {
     float: left;
     display: inline-block;
 }
+
+.breadcrumb {
+  background-color:white;
+}
+
+.index {
+  padding:0px;
+}

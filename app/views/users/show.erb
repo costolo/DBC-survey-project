@@ -6,9 +6,7 @@
 		<% @user.survey_users.each do |survey_user| %>
 			<a href="/surveys/ <%= survey_user.survey.id %>"><%= survey_user.survey.title %></a><br>
 		<% end %>
-	</div>
 
-<div class='container'>
 <p>Surveys made: </p>
 <div class='survey-div'>
 	<% @user.surveys.each do |survey| %>

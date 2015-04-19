@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $('#show').on('click', function(event) {
     $('#questions').toggle();
     $('.response').prop('disabled', true);
@@ -33,7 +32,6 @@ $(document).ready(function() {
   });
 
     $('#show-survey').on('submit', '.question-response', function(event) {
-
         event.preventDefault();
         var data = $('.question-response')
         $.ajax({

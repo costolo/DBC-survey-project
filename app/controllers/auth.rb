@@ -12,7 +12,7 @@ post '/login' do
 		session[:user_id] = user.id
 		redirect '/surveys'
 	else
-		@signin_error = "Bad Login"
+		session[:error] = "Bad login, try again"
 		redirect '/login'
 	end
 end
