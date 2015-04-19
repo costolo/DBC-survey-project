@@ -1,6 +1,6 @@
-
 <div class="container">	
 	<h2><%= @user.name %></h2>
+<<<<<<< HEAD
   <p>Surveys taken: </p>
   <% @user.survey_users.each do |survey_user| %>
     <a href="/surveys/ <%= survey_user.survey.id %>"><%= survey_user.survey.title %></a><br>
@@ -17,3 +17,26 @@
   </div>
   <br>
   <div class='survey-stats'></div>
+=======
+	<div>
+		<p>Surveys taken: </p>
+		<% @user.survey_users.each do |survey_user| %>
+			<a href="/surveys/ <%= survey_user.survey.id %>"><%= survey_user.survey.title %></a><br>
+		<% end %>
+	</div>
+
+<div>
+	<p>Surveys made: </p>
+	<div class='survey-div'>
+		<% @user.surveys.each do |survey| %>
+			<a href="/surveys/<%= survey.id %>"><%= survey.title %></a>
+				<form class='stats-button' action='/surveys/<%= survey.id %>/stats'>
+					<input type='submit' value='stats'>
+				</form><br>	
+				<div class='survey-stats'>
+					<%= erb :'surveys/_survey_stats', locals: {survey: survey} %>
+				</div>
+		<% end %>
+	</div>
+</div>
+>>>>>>> adds survey data to surveys users have made, need to fix bug that displays all instead of the one you clicked on
