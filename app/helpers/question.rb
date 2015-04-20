@@ -1,3 +1,3 @@
-def next_question(arry)
-  arry.shift
+def next_question
+  session[:questions].shift
 end
