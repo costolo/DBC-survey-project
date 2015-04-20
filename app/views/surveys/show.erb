@@ -2,19 +2,19 @@
   <div id="show-survey">
     <h2><%= @survey.title %></h2>
     <p><%= @survey.description %></p>
-    <button type="button" class="btn btn-default" id="show">Show Survey</button>
+    <button type="button" class="btn btn-default" id="show">View Questions</button>
     <% if !user_has_taken_survey?(@survey) && !user_created_survey?(@survey) %>
       <form id="take-survey" action="/survey_users" method="POST">
         <input type="hidden" name="survey_user[user_id]" value="<%= current_user.id %>">
         <input type="hidden" name="survey_user[survey_id]" value="<%= @survey.id %>">
-        <button type="submit" class="btn btn-default">Take Survey</button>
+        <button type="submit" class="btn btn-default" id="take-button">Take Survey</button>
       </form>
     <% end %>
     <div id="instructions">
-      <p>Please select <span>one</span> answer from the choices provided.</p>
+      <p>Please select <em>one</em> answer from the choices provided.</p>
     </div>
     <div id="questions">
-      <% @questions.each do |question| %>
+      <% @survey.questions.each do |question| %>
         <%= erb :_question, locals: {question: question} %>
       <% end %>
     </div>

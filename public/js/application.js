@@ -4,13 +4,13 @@ $(document).ready(function() {
     $('.response').prop('disabled', true);
     $('[type="radio"]').prop('disabled', true);
     var buttonLabel = $(this).text();
-    $(this).text(buttonLabel === "Show Survey" ? "Hide Survey" : "Show Survey");
+    $(this).text(buttonLabel === "View Questions" ? "Hide Questions" : "View Questions");
   });
 
   $('#take-survey').on('submit', function(event) {
     event.preventDefault();
     $('#instructions').toggle();
-    $(this).prop('disabled', true);
+    $('#take-button').prop('disabled', true);
     $('#show').prop('disabled', true);
     $('#questions').toggle(false);
 

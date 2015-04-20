@@ -13,8 +13,7 @@ end
 
 get '/surveys/:id' do |id|
   @survey = Survey.find(id)
-  @questions = @survey.questions
-  session[:questions] = @questions.pluck(:id)
+  session[:questions] =  @survey.questions.pluck(:id)
   erb :'surveys/show'
 end
 
