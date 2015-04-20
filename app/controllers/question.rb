@@ -1,6 +1,7 @@
 get '/question' do
-  question = Question.find_by(id: next_question(session[:questions]))
-  if question
+  q_id = next_question
+  if q_id
+    question = Question.find(q_id)
     erb :_question, layout: false, locals: {question: question}
   else
     erb :'surveys/_survey_over', layout: false
