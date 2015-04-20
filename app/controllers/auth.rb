@@ -8,12 +8,12 @@ end
 
 post '/login' do
 	user = User.find_by(name: params[:name])
-	if user.authenticate(params[:password])
-		session[:user_id] = user.id
-		redirect '/surveys'
-	else
+	if !user || !user.authenticate(params[:password])
 		session[:error] = "Bad login, try again"
 		redirect '/login'
+	else
+		session[:user_id] = user.id
+		redirect '/surveys'
 	end
 end
 
